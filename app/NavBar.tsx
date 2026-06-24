@@ -48,7 +48,7 @@ const NavBar = () => {
           <span>Aanpak</span>
         </Link>
 
-        <Link href="/start-1" className="flex flex-col items-center text-xs">
+        <Link href="/module-1" className="flex flex-col items-center text-xs">
           <span>1️⃣</span>
           <span>Start</span>
         </Link>
