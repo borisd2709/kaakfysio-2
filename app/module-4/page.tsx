@@ -127,7 +127,10 @@ export default function Module4() {
       <button
   className="btn btn-primary w-full"
   onClick={() => {
-    localStorage.setItem(
+    if (!session?.user?.id) return;
+
+    localStorage.setItem(  
+
       `module4-${session.user.id}`,
       "done"
     );

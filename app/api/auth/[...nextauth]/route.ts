@@ -10,14 +10,15 @@ export const authOptions = {
   ],
   
 callbacks: {
-    async session({ session, token }) {
-      // ✅ user ID toevoegen aan session
-      if (session.user) {
-        session.user.id = token.sub;
-      }
-      return session;
-    },
+  async session(
+    { session, token }: { session: any; token: any }
+  ) {
+    if (session.user) {
+      session.user.id = token.sub;
+    }
+    return session;
   },
+},
 
 };
 
